@@ -12,6 +12,7 @@ interface ResourceCardProps {
   phone: string;
   skills: string[];
   className?: string;
+  style?: React.CSSProperties;
 }
 
 const ResourceCard: React.FC<ResourceCardProps> = ({
@@ -22,7 +23,8 @@ const ResourceCard: React.FC<ResourceCardProps> = ({
   email,
   phone,
   skills,
-  className
+  className,
+  style
 }) => {
   return (
     <Link
@@ -33,6 +35,7 @@ const ResourceCard: React.FC<ResourceCardProps> = ({
         "group",
         className
       )}
+      style={style}
     >
       <div className="flex flex-col h-full">
         <h3 className="text-xl font-medium text-gray-800 mb-2 group-hover:text-brand-skyblue transition-colors">

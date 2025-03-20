@@ -14,6 +14,7 @@ interface InitiativeCardProps {
   endDate: string;
   status: 'Planning' | 'Execution' | 'Completed';
   className?: string;
+  style?: React.CSSProperties;
 }
 
 const InitiativeCard: React.FC<InitiativeCardProps> = ({
@@ -25,7 +26,8 @@ const InitiativeCard: React.FC<InitiativeCardProps> = ({
   startDate,
   endDate,
   status,
-  className
+  className,
+  style
 }) => {
   const statusColor = {
     Planning: 'bg-yellow-100 text-yellow-800',
@@ -42,6 +44,7 @@ const InitiativeCard: React.FC<InitiativeCardProps> = ({
         "group",
         className
       )}
+      style={style}
     >
       <div className="flex flex-col h-full">
         <div className="flex justify-between items-start mb-2">

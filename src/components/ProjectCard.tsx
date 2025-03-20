@@ -11,6 +11,7 @@ interface ProjectCardProps {
   slaStatus: number;
   defectResolution: number;
   className?: string;
+  style?: React.CSSProperties;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -19,7 +20,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   completion,
   slaStatus,
   defectResolution,
-  className
+  className,
+  style
 }) => {
   return (
     <Link
@@ -30,6 +32,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         "group",
         className
       )}
+      style={style}
     >
       <div className="flex flex-col h-full">
         <h3 className="text-xl font-medium text-gray-800 mb-4 group-hover:text-brand-skyblue transition-colors">

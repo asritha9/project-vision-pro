@@ -1,10 +1,33 @@
-
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import ChartComponent from '@/components/ChartComponent';
 import ProgressBar from '@/components/ProgressBar';
 import { ArrowLeft } from 'lucide-react';
+
+// Mock project data for cross-referencing
+const projectData = {
+  "1": {
+    id: "1",
+    name: "Azmara",
+    description: "A comprehensive enterprise resource planning solution."
+  },
+  "2": {
+    id: "2",
+    name: "Nexeo",
+    description: "A cloud-based customer relationship management platform."
+  },
+  "3": {
+    id: "3",
+    name: "Statefund",
+    description: "A governmental financial tracking system."
+  },
+  "4": {
+    id: "4",
+    name: "ASTM",
+    description: "An industrial quality control system."
+  }
+};
 
 // Mock resource data
 const resourceData = {

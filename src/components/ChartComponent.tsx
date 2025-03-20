@@ -30,6 +30,7 @@ interface ChartComponentProps {
   title?: string;
   height?: number;
   className?: string;
+  style?: React.CSSProperties;
 }
 
 const ChartComponent: React.FC<ChartComponentProps> = ({
@@ -39,7 +40,8 @@ const ChartComponent: React.FC<ChartComponentProps> = ({
   colors = ['#60B4EF', '#FF8FB4', '#90EE90', '#FFD580', '#E6E6FA'],
   title,
   height = 300,
-  className
+  className,
+  style
 }) => {
   const renderChart = () => {
     switch (type) {
@@ -206,7 +208,7 @@ const ChartComponent: React.FC<ChartComponentProps> = ({
   };
 
   return (
-    <div className={cn("bg-white rounded-xl p-5 shadow-sm border border-gray-100", className)}>
+    <div className={cn("bg-white rounded-xl p-5 shadow-sm border border-gray-100", className)} style={style}>
       {title && <h3 className="text-lg font-medium mb-4">{title}</h3>}
       {renderChart()}
     </div>
