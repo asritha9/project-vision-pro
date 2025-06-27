@@ -1,10 +1,18 @@
-import * as React from "react"
-import * as AccordionPrimitive from "@radix-ui/react-accordion"
-import { ChevronDown } from "lucide-react"
+// @ts-ignore
+import * as AccordionPrimitive from "@radix-ui/react-accordion";
+// Note: You need to install @radix-ui/react-accordion first:
+// Run: npm install @radix-ui/react-accordion
+// or: yarn add @radix-ui/react-accordion
+// First install lucide-react:
+// npm install lucide-react
+// or yarn add lucide-react
+import { ChevronDown } from "lucide-react";
 
 import { cn } from "@/lib/utils"
 
 const Accordion = AccordionPrimitive.Root
+
+import * as React from "react";
 
 const AccordionItem = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Item>,
